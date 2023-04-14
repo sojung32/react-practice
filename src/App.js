@@ -12,7 +12,7 @@ const App = () => {
     <Layout className="layout">
       <Header>
         <div className="logo">
-          <img src={Logo} />
+          <img src={Logo} alt="logo"/>
         </div>
         <Menu
           theme="dark"
