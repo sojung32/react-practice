@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,19 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# react-practice
+
+## react example
+```
+$ npx create-react-app REACT_APP_NAME
+$ cd REACT_APP_NAME
+$ npm start
+```
+
+## Ant Design
+[Ant Design](https://ant.design/)
+```
+$ yarn add antd
+```
+>>>>>>> cb10314167bb1483dad7704a66d10e6fcb122537
