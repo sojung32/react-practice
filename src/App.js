@@ -1,43 +1,47 @@
-import { Breadcrumb, Layout, Menu, theme } from 'antd';
+import { Breadcrumb, Layout, Menu } from 'antd';
 import Logo from "./logo.png";
+import "./styles/style.scss";
+import { HomeOutlined } from '@ant-design/icons';
+import Swiper from "./components/SwiperCpnt";
 
 const { Header, Content, Footer } = Layout;
 
 const App = () => {
-  const {
-    token: { colorBgContainer },
-  } = theme.useToken();
-
   return (
     <Layout className="layout">
       <Header>
-        <div className="logo">
-          <img src={Logo} alt="logo"/>
+        <div className="header-wrap">
+          <div className="logo">
+            <img src={Logo} alt="logo"/>
+          </div>
+          <Menu
+            theme="dark"
+            mode="horizontal"
+            defaultSelectedKeys={['2']}
+            items={new Array(8).fill(null).map((_, index) => {
+              const key = index + 1;
+              return {
+                key,
+                label: `nav ${key}`,
+              };
+            })}
+          />
         </div>
-        <Menu
-          theme="dark"
-          mode="horizontal"
-          defaultSelectedKeys={['2']}
-          items={new Array(8).fill(null).map((_, index) => {
-            const key = index + 1;
-            return {
-              key,
-              label: `nav ${key}`,
-            };
-          })}
-        />
       </Header>
-      <Content style={{ padding: '0 50px' }}>
-        <Breadcrumb style={{ margin: '16px 0' }}>
-          <Breadcrumb.Item>Home</Breadcrumb.Item>
-          <Breadcrumb.Item>List</Breadcrumb.Item>
-          <Breadcrumb.Item>App</Breadcrumb.Item>
+      <Content>
+        <Breadcrumb separator=">"
+          items={[
+            {title: <HomeOutlined />},
+            {title: 'List', href: ''},
+            {title: 'App', href: ''},
+          ]}>
         </Breadcrumb>
-        <div className="site-layout-content" style={{ background: colorBgContainer }}>
+        <Swiper/>
+        <div className="site-layout-content">
           Content
         </div>
       </Content>
-      <Footer style={{ textAlign: 'center' }}>Ant Design ©2023 Created by Ant UED</Footer>
+      <Footer>Ant Design ©2023 Created by Ant UED</Footer>
     </Layout>
   );
 };
