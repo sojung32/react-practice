@@ -3,6 +3,7 @@ import Logo from "./logo.png";
 import "./styles/style.scss";
 import { HomeOutlined } from '@ant-design/icons';
 import Swiper from "./components/SwiperCpnt";
+import Tab from "./components/TabCpnt";
 
 const { Header, Content, Footer } = Layout;
 
@@ -17,7 +18,7 @@ const App = () => {
           <Menu
             theme="dark"
             mode="horizontal"
-            defaultSelectedKeys={['2']}
+            // defaultSelectedKeys={['2']}
             items={new Array(8).fill(null).map((_, index) => {
               const key = index + 1;
               return {
@@ -29,17 +30,18 @@ const App = () => {
         </div>
       </Header>
       <Content>
-        <Breadcrumb separator=">"
+        {/* <Breadcrumb separator=">"
           items={[
             {title: <HomeOutlined />},
             {title: 'List', href: ''},
             {title: 'App', href: ''},
           ]}>
-        </Breadcrumb>
+        </Breadcrumb> */}
         <Swiper/>
-        <div className="site-layout-content">
+        <Tab/>
+        {/* <div className="site-layout-content">
           Content
-        </div>
+        </div> */}
       </Content>
       <Footer>Ant Design ©2023 Created by Ant UED</Footer>
     </Layout>
