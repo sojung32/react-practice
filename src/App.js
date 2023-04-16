@@ -1,7 +1,10 @@
-import { Breadcrumb, Layout, Menu } from 'antd';
+import { Breadcrumb, Layout } from 'antd';
+// import { Menu } from 'antd';
 import Logo from "./logo.png";
 import "./styles/style.scss";
 import { HomeOutlined } from '@ant-design/icons';
+
+import Menu from "./components/common/MenuCpnt";
 import Swiper from "./components/SwiperCpnt";
 import Tab from "./components/TabCpnt";
 
@@ -15,7 +18,7 @@ const App = () => {
           <div className="logo">
             <img src={Logo} alt="logo"/>
           </div>
-          <Menu
+          {/* <Menu
             theme="dark"
             mode="horizontal"
             // defaultSelectedKeys={['2']}
@@ -26,7 +29,8 @@ const App = () => {
                 label: `nav ${key}`,
               };
             })}
-          />
+          /> */}
+          <Menu/>
         </div>
       </Header>
       <Content>
