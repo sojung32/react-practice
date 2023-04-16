@@ -25,13 +25,13 @@ export default function SwiperCpnt() {
         modules={[Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide><img src={images['7eRAfZZ_T72cIsU-rJCpkw.jpg']} alt="hbd"/></SwiperSlide>
         <SwiperSlide><img src={images['UJ4FMfZlTKaFbro1sEE6nQ.jpg']} alt="hbd"/></SwiperSlide>
-        <SwiperSlide><img src={images['NX5WwCqPT5iaEY6OaYKLbA.jpg']} alt="hbd"/></SwiperSlide>
+        <SwiperSlide><img src={images['zIAalIVbTpmFaTgDK6Ithg.jpg']} alt="hbd"/></SwiperSlide>
         <SwiperSlide><img src={images['DaTnRahcTKa308KoEvtkow.jpg']} alt="hbd"/></SwiperSlide>
+        <SwiperSlide><img src={images['7eRAfZZ_T72cIsU-rJCpkw.jpg']} alt="hbd"/></SwiperSlide>
         <SwiperSlide><img src={images['byMVeYQdSsy-lP00Rh8shA.jpg']} alt="hbd"/></SwiperSlide>
         <SwiperSlide><img src={images['bib0JxcWQU-duhbYJ6o7QQ.jpg']} alt="hbd"/></SwiperSlide>
-        <SwiperSlide><img src={images['zIAalIVbTpmFaTgDK6Ithg.jpg']} alt="hbd"/></SwiperSlide>
+        <SwiperSlide><img src={images['NX5WwCqPT5iaEY6OaYKLbA.jpg']} alt="hbd"/></SwiperSlide>
       </Swiper>
     </>
   );
