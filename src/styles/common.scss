@@ -1,4 +1,4 @@
-* {font-family: 'NanumSquare';}
+* {font-family: 'NanumSquare'; box-sizing: border-box;}
 html, body, #root, section {height: 100%; margin: 0; background-color: #fff!important;}
 
 /* scroll style */
@@ -11,6 +11,10 @@ html, body, #root, section {height: 100%; margin: 0; background-color: #fff!impo
 header {
     height: $height-header;
     padding: 0!important;
+    padding-inline: 50px;
+    color: rgba(0, 0, 0, 0.88);
+    line-height: 64px;
+    background: #001529;
     .header-wrap {
         max-width: $max-width;
         margin: auto;
@@ -30,13 +34,21 @@ header {
 
 /* main */
 main {
-    min-height: calc(calc(100% - $height-header) - $height-footer); 
+    min-height: $height-main; 
     width: 100%;
     max-width: $max-width;
     margin: auto;
     background-color: #fff;
+    padding-bottom: 50px;
     nav {
         margin: 10px!important;
+    }
+    @media (max-width: $max-width) {
+        > div {
+            &:not(.swiper){
+                padding: 0 10px;
+            }
+        }
     }
 }
 
@@ -45,5 +57,8 @@ footer {
     height: $height-footer;
     width: 100%; 
     position: relative; 
-    padding: 20px 0;
+    padding: 24px 50px;
+    color: rgba(0, 0, 0, 0.88);
+    font-size: 14px;
+    background: #f5f5f5;
 }

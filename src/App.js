@@ -1,3 +1,4 @@
+import React from 'react';
 import { Breadcrumb, Layout } from 'antd';
 // import { Menu } from 'antd';
 import Logo from "./logo.png";
@@ -8,12 +9,10 @@ import Menu from "./components/common/MenuCpnt";
 import Swiper from "./components/SwiperCpnt";
 import Tab from "./components/TabCpnt";
 
-const { Header, Content, Footer } = Layout;
-
 const App = () => {
   return (
-    <Layout className="layout">
-      <Header>
+    <React.Fragment>
+      <header>
         <div className="header-wrap">
           <div className="logo">
             <img src={Logo} alt="logo"/>
@@ -32,8 +31,8 @@ const App = () => {
           /> */}
           <Menu/>
         </div>
-      </Header>
-      <Content>
+      </header>
+      <main>
         {/* <Breadcrumb separator=">"
           items={[
             {title: <HomeOutlined />},
@@ -46,9 +45,9 @@ const App = () => {
         {/* <div className="site-layout-content">
           Content
         </div> */}
-      </Content>
-      <Footer>Ant Design ©2023 Created by Ant UED</Footer>
-    </Layout>
+      </main>
+      <footer>Ant Design ©2023 Created by Ant UED</footer>
+    </React.Fragment>
   );
 };
 

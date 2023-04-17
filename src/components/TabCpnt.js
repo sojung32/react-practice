@@ -1,4 +1,5 @@
 import { Tabs } from 'antd';
+import EventCpnt from './EventCpnt';
 
 const onChange = (key) => {
   console.log(key);
@@ -7,7 +8,7 @@ const items = [
   {
     key: '1',
     label: `Tab 1`,
-    children: `Content of Tab Pane 1`,
+    children: <EventCpnt />,
   },
   {
     key: '2',

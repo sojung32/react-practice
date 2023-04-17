@@ -33,4 +33,28 @@
             border-radius: 20px;
         }
     }
-  }
+}
+
+/* event */
+.event-component {
+    display: flex;
+    .event-image {
+        line-height: 0;
+        img {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+    .event-content {
+        margin: auto 10px;
+        .event-title {
+            display: block;
+            font-weight: bold;
+        }
+    }
+    .event-like {
+        margin: auto 0;
+    }
+}
