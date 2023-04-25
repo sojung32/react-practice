@@ -38,6 +38,7 @@
 /* event */
 .event-component {
     display: flex;
+    margin: 5px;
     .event-image {
         line-height: 0;
         img {
@@ -49,9 +50,15 @@
     }
     .event-content {
         margin: auto 10px;
+        flex-grow: 1;
         .event-title {
             display: block;
-            font-weight: bold;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        p {
+            margin: 2px 0;
+            font-size: $font-s;
         }
     }
     .event-like {

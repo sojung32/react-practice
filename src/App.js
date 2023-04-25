@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 import { Breadcrumb, Layout } from 'antd';
 // import { Menu } from 'antd';
 import Logo from "./logo.png";
@@ -8,10 +9,11 @@ import { HomeOutlined } from '@ant-design/icons';
 import Menu from "./components/common/MenuCpnt";
 import Swiper from "./components/SwiperCpnt";
 import Tab from "./components/TabCpnt";
+import MainCpnt from './MainCpnt';
 
 const App = () => {
   return (
-    <React.Fragment>
+    <Router>
       <header>
         <div className="header-wrap">
           <div className="logo">
@@ -33,21 +35,28 @@ const App = () => {
         </div>
       </header>
       <main>
-        {/* <Breadcrumb separator=">"
-          items={[
-            {title: <HomeOutlined />},
-            {title: 'List', href: ''},
-            {title: 'App', href: ''},
-          ]}>
-        </Breadcrumb> */}
-        <Swiper/>
-        <Tab/>
-        {/* <div className="site-layout-content">
-          Content
-        </div> */}
+        <Switch>
+          <Route path="/" exact>
+            {/* <Breadcrumb separator=">"
+              items={[
+                {title: <HomeOutlined />},
+                {title: 'List', href: ''},
+                {title: 'App', href: ''},
+              ]}>
+            </Breadcrumb> */}
+            <Swiper/>
+            <Tab/>
+            {/* <div className="site-layout-content">
+              Content
+            </div> */}
+          </Route>
+          <Route path="/main" exact>
+            <MainCpnt/>
+          </Route>
+        </Switch>
       </main>
       <footer>Ant Design ©2023 Created by Ant UED</footer>
-    </React.Fragment>
+    </Router>
   );
 };
 
