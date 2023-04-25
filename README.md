@@ -35,3 +35,8 @@ $ npm install node-sass
 ```
 $ npm install swiper
 ```
+
+## react-router-dom
+```
+$ npm install --save react-router-dom@5 --save-exact
+```
