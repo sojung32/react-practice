@@ -1,15 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
-import { Breadcrumb, Layout } from 'antd';
-// import { Menu } from 'antd';
 import Logo from "./logo.png";
 import "./styles/style.scss";
-import { HomeOutlined } from '@ant-design/icons';
 
 import Menu from "./components/common/MenuCpnt";
 import Swiper from "./components/SwiperCpnt";
 import Tab from "./components/TabCpnt";
 import MainCpnt from './MainCpnt';
+import Detail from './pages/Detail';
 
 const App = () => {
   return (
@@ -19,39 +17,20 @@ const App = () => {
           <div className="logo">
             <img src={Logo} alt="logo"/>
           </div>
-          {/* <Menu
-            theme="dark"
-            mode="horizontal"
-            // defaultSelectedKeys={['2']}
-            items={new Array(8).fill(null).map((_, index) => {
-              const key = index + 1;
-              return {
-                key,
-                label: `nav ${key}`,
-              };
-            })}
-          /> */}
           <Menu/>
         </div>
       </header>
       <main>
         <Switch>
           <Route path="/" exact>
-            {/* <Breadcrumb separator=">"
-              items={[
-                {title: <HomeOutlined />},
-                {title: 'List', href: ''},
-                {title: 'App', href: ''},
-              ]}>
-            </Breadcrumb> */}
             <Swiper/>
             <Tab/>
-            {/* <div className="site-layout-content">
-              Content
-            </div> */}
           </Route>
           <Route path="/main" exact>
             <MainCpnt/>
+          </Route>
+          <Route path="/detail" exact>
+            <Detail/>
           </Route>
         </Switch>
       </main>
