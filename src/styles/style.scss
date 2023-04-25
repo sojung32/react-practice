@@ -92,3 +92,63 @@
         }
     }
 }
+
+/* character */
+.detail-character {
+    .detail-header {
+        position: relative;
+        padding-top: 75%;
+        overflow: hidden;
+        .header-image-centered {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            -webkit-transform: translate(50%,50%);
+            -ms-transform: translate(50%,50%);
+            transform: translate(50%,50%);
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                max-width: 100%;
+                height: auto;
+                -webkit-transform: translate(-50%,-50%);
+                -ms-transform: translate(-50%,-50%);
+                transform: translate(-50%,-50%);
+            }
+        }
+    }
+    .title-group {
+        display: flex;
+        h2 {
+            display: inline-block;
+            flex-grow: 1;
+        }
+        .button-group {
+            display: inline-block;
+            flex-grow: 0;
+            margin: auto 0;
+        }
+    }
+}
+
+/* calendar */
+.event-calendar {
+    .calendar-title {
+        text-align: center;
+        h3 {
+            display: inline-block;
+            margin: 0 10px;
+        }
+    }
+    table div {
+        text-align: left;
+        .ant-badge {
+            position: absolute;
+            top: 6px;
+            right: 2px;
+        }
+    }
+}

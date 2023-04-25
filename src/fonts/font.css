@@ -27,3 +27,31 @@
 	font-weight: 800;
 	font-style: bolder;
 }
+
+@font-face {
+	font-family: 'NanumSquareRound';
+	src: url('./NanumSquareRoundOTFL.otf') format('opentype');
+	font-weight: 200;
+	font-style: lighter;
+}
+
+@font-face {
+	font-family: 'NanumSquareRound';
+	src: url('./NanumSquareRoundOTFR.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'NanumSquareRound';
+	src: url('./NanumSquareRoundOTFB.otf') format('opentype');
+	font-weight: 600;
+	font-style: bold;
+}
+
+@font-face {
+	font-family: 'NanumSquareRound';
+	src: url('./NanumSquareRoundOTFEB.otf') format('opentype');
+	font-weight: 800;
+	font-style: bolder;
+}

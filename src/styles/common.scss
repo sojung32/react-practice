@@ -1,4 +1,4 @@
-* {font-family: 'NanumSquare'; box-sizing: border-box;}
+* {font-family: 'NanumSquareRound'; box-sizing: border-box;}
 html, body, #root, section {height: 100%; margin: 0; background-color: #fff!important;}
 
 /* scroll style */
@@ -47,6 +47,9 @@ main {
     padding-bottom: 50px;
     nav {
         margin: 10px!important;
+    }
+    > div {
+        margin-top: 10px;
     }
     @media (max-width: $max-width) {
         > div {

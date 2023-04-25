@@ -6,8 +6,9 @@ import "./styles/style.scss";
 import Menu from "./components/common/MenuCpnt";
 import Swiper from "./components/SwiperCpnt";
 import Tab from "./components/TabCpnt";
-import MainCpnt from './MainCpnt';
+import MainCpnt from './pages/Main';
 import Detail from './pages/Detail';
+import Character from './pages/Character';
 
 const App = () => {
   return (
@@ -31,6 +32,9 @@ const App = () => {
           </Route>
           <Route path="/detail" exact>
             <Detail/>
+          </Route>
+          <Route path="/character" exact>
+            <Character/>
           </Route>
         </Switch>
       </main>

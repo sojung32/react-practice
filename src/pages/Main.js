@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Swiper from "./components/SwiperCpnt";
-import { CelebList } from './components/Celeb';
-import EventCpnt from './components/EventCpnt';
+import Swiper from "../components/SwiperCpnt";
+import { CelebList } from '../components/Celeb';
+import EventCpnt from '../components/EventCpnt';
 
 const MainCpnt = () => {
     return (

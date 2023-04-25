@@ -40,3 +40,8 @@ $ npm install swiper
 ```
 $ npm install --save react-router-dom@5 --save-exact
 ```
+
+## react-bootstrap-icons
+```
+$ npm install --save react-bootstrap-icons
+```
