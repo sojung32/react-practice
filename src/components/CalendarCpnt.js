@@ -13,16 +13,16 @@ const eventDateList = [
 ]
 const anniversary = '2023-03-21';
 const eventList = {
-    date: '2023-03-10',
+    date: '2023-03-07',
     events: [
         {
             title: '임현식 생일카페1',
-            date: '2023-03-10',
+            date: '2023-03-07',
             location: 'space',
         },
         {
             title: '임현식 생일카페2',
-            date: '2023-03-10',
+            date: '2023-03-07',
             location: 'space2',
         },
     ]

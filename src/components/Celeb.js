@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Avatar } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
 
 const Celeb = (props) => {
     const url = props.url ? props.url : 'https://pbs.twimg.com/profile_images/912222837938589697/_OWluI2j_400x400.jpg';
+    
     return (
-        <Avatar size={80} src={url} style={defaultStyle}></Avatar>
+        <Link to={'/character'}>
+            <Avatar size={80} src={url} style={defaultStyle}></Avatar>
+        </Link>
     );
 };
 

@@ -1,6 +1,9 @@
 import { Button, Drawer, Menu } from 'antd';
 import { useState } from 'react';
-import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
+import { MenuOutlined, CloseOutlined, MailOutlined, AppstoreOutlined, SettingOutlined, SearchOutlined, CarryOutOutlined, UserOutlined } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
+
+const logo = process.env.PUBLIC_URL + '/celebring.png';
 
 function getItem(label, key, icon, children, type) {
   return {
@@ -46,25 +49,32 @@ const MenuCpnt = () => {
   };
   return (
     <>
-      <Button type="primary" onClick={showDrawer}>
-        Menu
-      </Button>
+      <div className="logo">
+        <Link to={'/main'}>
+          <img src={logo} alt="logo"/>
+        </Link>
+      </div>
+      {open ? 
+        <Button type="text" shape="circle" icon={<CloseOutlined/>} onClick={onClose}/> :
+        <Button type="text" shape="circle" icon={<MenuOutlined/>} onClick={showDrawer}/>
+      }
       <Drawer 
         title="Basic Drawer" 
-        placement="right" 
+        placement="top" 
         onClose={onClose} 
         open={open}
         bodyStyle={{
           padding: 0,
         }}
       >
-        <Menu
-          onClick={onClick}
-          defaultSelectedKeys={['1']}
-          defaultOpenKeys={['sub1']}
-          mode="inline"
-          items={items}
-        />
+        <div className="login-list">
+          <h2 style={{marginLeft: 15, display: 'inline-block', marginBottom: 30}}>로그인</h2>
+        </div>
+        <div className="menu-list">
+          <Button type="text" block size="large" style={{textAlign: 'left'}}><SearchOutlined/> 검색</Button>
+          <Button type="text" block size="large" style={{textAlign: 'left'}}><CarryOutOutlined/> 이벤트</Button>
+          <Button type="text" block size="large" style={{textAlign: 'left'}}><UserOutlined/> 마이페이지</Button>
+        </div>
       </Drawer>
     </>
   );

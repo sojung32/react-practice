@@ -3,6 +3,7 @@ import { Rate } from 'antd';
 import { HeartFilled, EnvironmentOutlined, CalendarOutlined } from '@ant-design/icons';
 
 import thumbnail from "./../images/7eRAfZZ_T72cIsU-rJCpkw.jpg";
+import { Link } from 'react-router-dom';
 
 const EventCpnt = (props) => {
     let title = props.title ? props.title : '이벤트명입니다. 생일카페 이벤트명입니다.';
@@ -11,14 +12,16 @@ const EventCpnt = (props) => {
     let heart = props.heart ? props.heart : 1;
     return (
         <div className="event-component">
-            <div className="event-image">
-                <img src={thumbnail} alt="thumbnail"/>
-            </div>
-            <div className="event-content">
-                <span className="event-title">{title}</span>
-                <p className="event-date"><CalendarOutlined/> {date}</p>
-                <p className="event-location"><EnvironmentOutlined/> {location}</p>
-            </div>
+            <Link to={'/event'}>
+                <div className="event-image">
+                    <img src={thumbnail} alt="thumbnail"/>
+                </div>
+                <div className="event-content">
+                    <span className="event-title">{title}</span>
+                    <p className="event-date"><CalendarOutlined/> {date}</p>
+                    <p className="event-location"><EnvironmentOutlined/> {location}</p>
+                </div>
+            </Link>
             <div className="event-like">
                 <Rate 
                     character={<HeartFilled />} 
