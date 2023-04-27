@@ -39,7 +39,12 @@ const App = () => {
             </Route>
           </Switch>
         </main>
-        <footer>Ant Design ©2023 Created by Ant UED</footer>
+        <footer>
+          <div>
+            <p>celebring</p>
+            <p>©2023</p>
+          </div>
+        </footer>
       </div>
     </Router>
   );
