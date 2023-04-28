@@ -31,6 +31,7 @@ const EventDetail = (props) => {
                     <span>내용~~~~~~~~</span>
                 </div>
                 <div className="detail-after">
+                    <h4>후기를 입력하세요</h4>
                     <AfterWordList />
                 </div>
             </div>
