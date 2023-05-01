@@ -1,6 +1,7 @@
 /* layout height */
 $height-header: 57px;
-$height-main: calc(100% - 141px);
+$height-footer: 95px;
+$height-main: calc(100% - #{$height-footer});
 
 /* color */
 $color-main: yellowgreen;

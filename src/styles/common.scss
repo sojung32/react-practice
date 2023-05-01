@@ -87,7 +87,7 @@ main {
     @media (max-width: $max-width) {
         > div {
             &:not(.swiper){
-                padding: 0 10px;
+                margin: 0 10px;
             }
         }
     }
@@ -96,6 +96,7 @@ main {
 /* footer */
 footer {
     width: 100%; 
+    height: $height-footer;
     position: relative; 
     padding: 10px 20px;
     font-size: 14px;
