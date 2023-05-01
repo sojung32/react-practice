@@ -105,3 +105,11 @@ footer {
         margin: auto;
     }
 }
+
+@mixin ellipsis($line-cnt) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $line-cnt;
+    -webkit-box-orient: vertical;
+}

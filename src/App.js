@@ -21,7 +21,7 @@ const App = () => {
       <div className="main">
         <main>
           <Switch>
-            <Route path="/" exact>
+            <Route path="/test" exact>
               <Swiper/>
               <Tab/>
             </Route>
@@ -37,6 +37,7 @@ const App = () => {
             <Route path="/event" exact>
               <EventDetail/>
             </Route>
+            <Redirect to="/main"/>
           </Switch>
         </main>
         <footer>

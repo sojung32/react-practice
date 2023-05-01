@@ -13,14 +13,14 @@ const MenuCpnt = () => {
   const onClose = () => {
     setOpen(false);
   };
-  const onClick = (e) => {
-    console.log('click ', e);
+  const onClick = () => {
+    setOpen(false);
   };
   return (
     <>
       <div className="logo">
         <Link to={'/main'}>
-          <img src={logo} alt="logo"/>
+          <img src={logo} alt="logo" onClick={onClick}/>
         </Link>
       </div>
       {open ? 
